@@ -1,13 +1,8 @@
 from django.db import models
 import datetime
+from django.contrib.auth.models import User
 
 # Create your models here.
-class User(models.Model):
-    name = models.CharField(max_length=200)
-
-    def __str__(self):
-        return self.name
-
 class Todo(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
